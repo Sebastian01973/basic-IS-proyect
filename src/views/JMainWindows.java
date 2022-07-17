@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowListener;
+import java.util.ArrayList;
 
 public class JMainWindows extends JFrame {
 
@@ -37,6 +38,20 @@ public class JMainWindows extends JFrame {
         jDialogDelete = new JDialogDelete(actionListener,this);
         jMainPanel = new JMainPanel(actionListener,mouseListener);
         this.getContentPane().add(jMainPanel, BorderLayout.CENTER);
+    }
 
+    public void addRowsToTable(ArrayList<Object[]> matrix, String[] newHeaders){
+        jMainPanel.addRowsToTable(matrix, newHeaders);
+    }
+    public void addElementToTable(ArrayList<Object[]> matrix){
+        jMainPanel.addElementToTable(matrix);
+    }
+
+    public String getSelectedRow(Point point ){
+        return jMainPanel.getSelectedRow(point);
+    }
+
+    public int getColumnCountTable(){
+        return jMainPanel.getColumnCountTable();
     }
 }
