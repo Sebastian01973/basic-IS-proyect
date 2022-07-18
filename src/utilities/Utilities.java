@@ -21,4 +21,35 @@ public class Utilities {
         column.setMaxWidth(maxWidth);
         column.setMinWidth(minWidth);
     }
+
+    public static void moveRight(int start,int end,long sleep,int jump,JPanel panel) {
+        (new Thread() {
+            public void run() {
+                for(int i = start; i <= end; i += jump) {
+                    try {
+                        Thread.sleep(sleep);
+                        panel.setLocation(i, panel.getY());
+                    } catch (Exception var3) {
+                        var3.printStackTrace();
+                    }
+                }
+
+            }
+        }).start();
+    }
+
+    public static void moveLeft(int start,int end,long sleep,int jump,JPanel panel) {
+        (new Thread() {
+            public void run() {
+                for(int i = start; i >= end; i -= jump) {
+                    try {
+                        Thread.sleep(sleep);
+                        panel.setLocation(i, panel.getY());
+                    } catch (Exception var3) {
+                        var3.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
 }

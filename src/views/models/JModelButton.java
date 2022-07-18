@@ -149,6 +149,8 @@ public class JModelButton extends JButton{
 		this.setBorderPainted( false );
 		this.setFocusable( false );
 		this.setOpaque(false);
+		this.setHorizontalTextPosition( SwingConstants.CENTER );
+		this.setVerticalTextPosition( SwingConstants.BOTTOM );
 		this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		this.setBackground(bg);
 		this.setForeground(fg);

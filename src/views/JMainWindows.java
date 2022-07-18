@@ -54,4 +54,12 @@ public class JMainWindows extends JFrame {
     public int getColumnCountTable(){
         return jMainPanel.getColumnCountTable();
     }
+
+    public void setVisibleLeft(boolean visibleLeft){
+        jMainPanel.setVisibleLeft(visibleLeft);
+    }
+
+    public int getPositionLeft(){
+        return jMainPanel.getPositionLeft();
+    }
 }

@@ -40,6 +40,24 @@ public class JModelButtonMenu extends JButton implements MouseListener, MouseMot
     
     private Font f = Constant.FONT_ARIAL_ROUNDER_15;
 
+    public JModelButtonMenu(String text) {
+        super(text);
+        this.setFont(f);
+        this.setFocusable( false );
+        this.setPreferredSize(new Dimension(150, 35));
+        this.setSize(new Dimension(150, 35));
+        this.setBorder(null);
+        this.setContentAreaFilled(false);
+        this.setHorizontalAlignment(SwingConstants.CENTER);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        this.setBackground(colorNormal);
+        this.setForeground(this.colorTextNormal);
+        this.setOpaque(true);
+        this.setVisible(true);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+    }
+
     public JModelButtonMenu(String text,String pathImage,int width,int height) {
         super(text);
         ImageIcon imagen = new ImageIcon(getClass().getResource(pathImage));

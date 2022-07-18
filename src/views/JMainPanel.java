@@ -48,6 +48,12 @@ public class JMainPanel extends JPanel {
         return jTableCenter.getColumnCountTable();
     }
 
+    public void setVisibleLeft(boolean visibleLeft){
+        jLeftPanel.setVisibleLeft(visibleLeft);
+    }
 
+    public int getPositionLeft(){
+        return jLeftPanel.getPositionLeft();
+    }
 
 }

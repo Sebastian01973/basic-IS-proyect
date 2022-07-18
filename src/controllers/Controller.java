@@ -4,6 +4,7 @@ import models.Store;
 import views.JMainWindows;
 
 import java.awt.event.*;
+import java.util.logging.Logger;
 
 public class Controller implements ActionListener, MouseListener, WindowListener {
 
@@ -17,7 +18,19 @@ public class Controller implements ActionListener, MouseListener, WindowListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        switch (Command.valueOf(e.getActionCommand())) {
+            case B_MENU -> this.setleftPanel();
+            default -> Logger.getGlobal().severe("Error");
+        }
+    }
 
+    private void setleftPanel() {
+        int position = jMainWindows.getPositionLeft();
+        if (position > 0) {
+            jMainWindows.setVisibleLeft(false);
+        } else {
+            jMainWindows.setVisibleLeft(true);
+        }
     }
 
     @Override

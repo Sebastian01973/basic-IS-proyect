@@ -8,8 +8,10 @@ public class Constant {
 
     // URLS
 
-    public static final String IMG_ARROW_DOWN = "images/arrowDown.png";
-    public static final String IMG_ARROW_RIGHT = "images/arrowRight.png";
+    public static final String IMG_ARROW_DOWN = "/arrowDown.png";
+    public static final String IMG_ARROW_RIGHT = "/arrowRight.png";
+    public static final String IMG_MENU = "/menu.png";
+    public static final String IMG_PRODUCTS = "/product.png";
 
     //Colors
     public static final Color COLOR_WHITE = Color.decode("#ffffff") ;
@@ -39,5 +41,7 @@ public class Constant {
 
     public static final String[] H_PRODUCTS = {"Codigo","Nombre","Unidades","Precio","Tipo de Producto","Descripcion"};
     public static final String M_SELECT_OPTION= "Seleccionar una opcion...";
+    public static final String TXT_SIGN_OFF= "Salir";
+    public static final String[] TXT_MENU= {"Agregar Producto","Buscar Producto","Eliminar Producto"};
 
 }
