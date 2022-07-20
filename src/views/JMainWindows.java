@@ -62,4 +62,25 @@ public class JMainWindows extends JFrame {
     public int getPositionLeft(){
         return jMainPanel.getPositionLeft();
     }
+
+    public void setVisibleDialogAdd(boolean status){
+        jDialogAdd.setVisible(status);
+    }
+
+    public void setVisibleSearchDialog(boolean status){
+        jDialogSearch.setVisible(status);
+    }
+
+    public void setVisibleDeleteDialog(boolean status){
+        jDialogDelete.setVisible(status);
+    }
+
+    public void resetDatesAddProduct() {
+        jDialogAdd.resetDatesAddProduct();
+    }
+
+    public Object[] createProduct() {
+        return jDialogAdd.createProduct();
+    }
+
 }

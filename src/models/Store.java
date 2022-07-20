@@ -38,9 +38,8 @@ public class Store {
             case 1: return TypeProduct.CONCENTRATES;
             case 2: return TypeProduct.NECKLACES;
             case 3: return TypeProduct.HYGIENE_PRODUCT;
-            case 4: return TypeProduct.DEWORMERS;
-            case 5: return TypeProduct.MEDICINES;
-            case 6: return TypeProduct.VACCINES;
+            case 4: return TypeProduct.MEDICINES;
+            case 5: return TypeProduct.VACCINES;
             default: return null;
         }
     }
