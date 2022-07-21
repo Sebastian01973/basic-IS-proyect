@@ -1,6 +1,5 @@
 package views.admin;
 
-import utilities.Utilities;
 import views.Constant;
 
 import javax.swing.*;
@@ -36,7 +35,7 @@ public class JTableCenter extends JPanel {
         jTable.setModel(dtmElements);
         jTable.setIntercellSpacing(new Dimension(0, 0));
         jTable.getTableHeader().setReorderingAllowed(false);
-        jTable.getTableHeader().setBackground(Constant.COLOR_GRAY_LIGHT_1);
+        jTable.getTableHeader().setBackground(Constant.COLOR_WHITE);
         jTable.getTableHeader().setForeground(Constant.COLOR_BLUE_DARK_2);
         jTable.getTableHeader().setPreferredSize(new Dimension(0, 50));
         jTable.getTableHeader().setFont(Constant.FONT_ARIAL_ROUNDER_17);

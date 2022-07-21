@@ -4,8 +4,10 @@ import controllers.Command;
 import views.Constant;
 import views.models.JModelButton;
 import views.models.JModelButtonMenu;
+import views.models.JModelLabel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class JNorthPanel extends JPanel {
@@ -14,7 +16,7 @@ public class JNorthPanel extends JPanel {
     private JModelButton products;
 
     public JNorthPanel(ActionListener actionListener) {
-        this.setBackground(Constant.COLOR_BLUE_DARK_2);
+        this.setBackground(Constant.COLOR_GREEN_DARK_2);
         this.setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
         this.setBorder(BorderFactory.createEmptyBorder(2,30,2,5));
         initComponents(actionListener);
@@ -24,9 +26,15 @@ public class JNorthPanel extends JPanel {
         jBMenu = new JModelButtonMenu("",Constant.IMG_MENU,30,30);
         jBMenu.setActionCommand(Command.B_MENU.toString());
         jBMenu.addActionListener(actionListener);
-        jBMenu.setColorNormal(Constant.COLOR_BLUE_DARK_2);
-        jBMenu.setColorPressed(Constant.COLOR_BLUE_DARK_1);
-        jBMenu.setColorHover(Constant.COLOR_BLUE_DARK_3);
+        jBMenu.setColorNormal(Constant.COLOR_GREEN_DARK_2);
+        jBMenu.setColorPressed(Constant.COLOR_GREEN_PRESSED);
+        jBMenu.setColorHover(Constant.COLOR_GREEN_HOVER);
         this.add(jBMenu);
+
+        add(Box.createRigidArea(new Dimension((int) (Constant.SCREEN_SIZE.getWidth()*0.01),0)));
+
+        JModelLabel logo = new JModelLabel(Constant.IMG_BANNER,150,40);
+        logo.setColorPaint(Constant.COLOR_GREEN_DARK_2);
+        this.add(logo);
     }
 }

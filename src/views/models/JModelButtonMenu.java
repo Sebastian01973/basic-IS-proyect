@@ -27,8 +27,8 @@ public class JModelButtonMenu extends JButton implements MouseListener, MouseMot
      * Color para el fondo del boton
      */
     private Color colorNormal = Constant.COLOR_WHITE;
-    private Color colorPressed = Constant.COLOR_BLUE_DARK_2;
-    private Color colorHover = Constant.COLOR_GRAY_LIGHT_1;
+    private Color colorPressed = Constant.COLOR_GREEN_PRESSED;
+    private Color colorHover = Constant.COLOR_GREEN_HOVER;
     
     private Border bordeMoved = BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(255, 255, 255));
     /**

@@ -25,8 +25,10 @@ public class Constant {
     public static final Color COLOR_GRAY_LIGHT_1 = Color.decode("#c0c0c0");
     public static final Color COLOR_GRAY_LIGHT_2 = Color.decode("#f0f5f7");
     public static final Color COLOR_BLUE_DARK_1 = Color.decode("#131921");
-    public static final Color COLOR_BLUE_DARK_2 = Color.decode("#00a64e");
+    public static final Color COLOR_BLUE_DARK_2 = Color.decode("#232f3e");
     public static final Color COLOR_GREEN_DARK_2 = Color.decode("#00a64e");
+    public static final Color COLOR_GREEN_HOVER = Color.decode("#1EB309");
+    public static final Color COLOR_GREEN_PRESSED = Color.decode("#7AB21E");
     public static final Color COLOR_BLUE_DARK_3 = Color.decode("#0C1E42");
 
     //Fonts
@@ -66,4 +68,5 @@ public class Constant {
     public static final String D_TXT_PRODUCT = "Peoducto";
     public static final String TXT_MODIFY = "Modificar";
     public static final String TXT_DELETE = "Eliminar";
+    public static final String D_TXT_DELETE = "Eliminar Producto";
 }
