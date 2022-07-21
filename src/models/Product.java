@@ -26,9 +26,21 @@ public class Product {
 
     public Object[] toObjectvector(){
         return new Object[]{
-          this.code,this.nameProduct,this.units,this.price,this.typeProduct.toString(),this.description,
+          this.code,this.nameProduct,this.units,this.price,
+                convertTypeProductString(this.typeProduct.toString()),this.description,
                 calculatePriceTotal()
         };
+    }
+
+    public String convertTypeProductString(String typeProduct){
+        switch (typeProduct){
+            case "CONCENTRATES": return "Concentrados";
+            case "NECKLACES": return "Collares";
+            case "HYGIENE_PRODUCT": return "Productos Aseo";
+            case "MEDICINES": return "Medicamentos";
+            case "VACCINES": return "Vacunas";
+            default: return null;
+        }
     }
 
     public int getCode() {

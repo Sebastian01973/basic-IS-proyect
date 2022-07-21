@@ -54,11 +54,11 @@ public class JDialogProduct extends JDialog {
 
     public int getSelectType(String value){
         switch (value){
-            case "CONCENTRATES": return 1;
-            case "NECKLACES": return 2;
-            case "HYGIENE_PRODUCT": return 3;
-            case "MEDICINES": return 4;
-            case "VACCINES": return 5;
+            case "Concentrados": return 1;
+            case "Collares": return 2;
+            case "Productos Aseo": return 3;
+            case "Medicamentos": return 4;
+            case "Vacunas": return 5;
             default: return -1;
         }
     }

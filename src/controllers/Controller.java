@@ -64,7 +64,6 @@ public class Controller implements ActionListener, MouseListener, WindowListener
                 JOptionPane.showMessageDialog(jMainWindows, Constant.TXT_ADD_PRODUCT);
                 jMainWindows.resetDatesAddProduct();
             }else {
-                System.out.println("Uwuw");
                 JOptionPane.showMessageDialog(jMainWindows,Constant.TXT_NOT_TYPE_PRODUCT);
             }
         }else{
