@@ -104,9 +104,9 @@ public class JTableCenter extends JPanel {
         return jTable.getColumnCount();
     }
 
-    public String getSelectedRow(Point point ){
+    public int getSelectedRow(Point point ){
         int selectedRow = jTable.rowAtPoint(point);
-        return String.valueOf(jTable.getValueAt(selectedRow,0));
+        return Integer.parseInt(String.valueOf(jTable.getValueAt(selectedRow,0)));
     }
 
 }

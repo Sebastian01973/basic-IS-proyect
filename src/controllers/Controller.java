@@ -7,7 +7,9 @@ import views.Constant;
 import views.JMainWindows;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 public class Controller implements ActionListener, MouseListener, WindowListener {
@@ -34,6 +36,11 @@ public class Controller implements ActionListener, MouseListener, WindowListener
         }
     }
 
+    private void loadProducts(){
+        ArrayList<Object[]> products = store.getMatrixProducts();
+        jMainWindows.addElementToTable(products);
+    }
+
     private void cancelProduct() {
         jMainWindows.setVisibleDialogAdd(false);
         jMainWindows.resetDatesAddProduct();
@@ -50,9 +57,10 @@ public class Controller implements ActionListener, MouseListener, WindowListener
                 String desc = String.valueOf(product[4]);
 
                 //Crear el producto
-                this.jMainWindows.setVisibleDialogAdd(false);
                 Product productAdd = store.createProduct(nameProduct,units,price,store.getType(typeProduct),desc);
                 store.addProduct(productAdd);
+                jMainWindows.addElementToTable(productAdd.toObjectvector());
+                this.jMainWindows.setVisibleDialogAdd(false);
                 JOptionPane.showMessageDialog(jMainWindows, Constant.TXT_ADD_PRODUCT);
                 jMainWindows.resetDatesAddProduct();
             }else {
@@ -117,6 +125,15 @@ public class Controller implements ActionListener, MouseListener, WindowListener
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        if (jMainWindows.getColumnCountTable() == Constant.H_PRODUCTS.length){
+            Point value = e.getPoint();
+            int codeProduct = jMainWindows.getSelectedRow(value);
+            Product product = store.searchProduct(codeProduct);
+            Object[] objProduct = product.toObjectvector();
+            jMainWindows.addObjectsProduct(objProduct);
+
+            jMainWindows.setVisibleDialogProduct(true);
+        }
 
     }
 

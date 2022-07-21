@@ -47,7 +47,11 @@ public class JMainWindows extends JFrame {
         jMainPanel.addElementToTable(matrix);
     }
 
-    public String getSelectedRow(Point point ){
+    public void addObjectsProduct(Object[] objects){
+        jDialogProduct.addObjectsProduct(objects);
+    }
+
+    public int getSelectedRow(Point point ){
         return jMainPanel.getSelectedRow(point);
     }
 
@@ -75,12 +79,20 @@ public class JMainWindows extends JFrame {
         jDialogDelete.setVisible(status);
     }
 
+    public void setVisibleDialogProduct(boolean status){
+        jDialogProduct.setVisible(status);
+    }
+
     public void resetDatesAddProduct() {
         jDialogAdd.resetDatesAddProduct();
     }
 
     public Object[] createProduct() {
         return jDialogAdd.createProduct();
+    }
+
+    public void addElementToTable(Object[] vector){
+        jMainPanel.addElementToTable(vector);
     }
 
 }

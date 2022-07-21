@@ -41,7 +41,7 @@ public class Constant {
     public static final Font FONT_HELVETICA_15 = new Font("Helvetica", Font.PLAIN, 15);
     public static final Font FONT_HELVETICA_13 = new Font("Helvetica", Font.PLAIN, 13);
 
-    public static final String[] H_PRODUCTS = {"Codigo", "Nombre", "Unidades", "Precio", "Tipo de Producto", "Descripcion"};
+    public static final String[] H_PRODUCTS = {"Codigo", "Nombre", "Unidades", "Precio unidad", "Tipo de Producto", "Descripcion","Precio Total"};
     public static final String M_SELECT_OPTION = "Seleccionar una opcion...";
     public static final String TXT_SIGN_OFF = "Salir";
     public static final String[] TXT_MENU = {"Agregar Producto", "Buscar Producto", "Eliminar Producto"};
@@ -63,4 +63,7 @@ public class Constant {
 
     public static final Object TXT_NOT_TYPE_PRODUCT = "No escogio el tipo de producto";
     public static final Object TXT_ADD_PRODUCT = "Producto Agregado";
+    public static final String D_TXT_PRODUCT = "Peoducto";
+    public static final String TXT_MODIFY = "Modificar";
+    public static final String TXT_DELETE = "Eliminar";
 }

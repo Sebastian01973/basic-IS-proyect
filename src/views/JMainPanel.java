@@ -40,7 +40,7 @@ public class JMainPanel extends JPanel {
         jTableCenter.addElementToTable(matrix);
     }
 
-    public String getSelectedRow(Point point ){
+    public int getSelectedRow(Point point ){
         return jTableCenter.getSelectedRow(point);
     }
 
@@ -54,6 +54,10 @@ public class JMainPanel extends JPanel {
 
     public int getPositionLeft(){
         return jLeftPanel.getPositionLeft();
+    }
+
+    public void addElementToTable(Object[] vector){
+        jTableCenter.addElementToTable(vector);
     }
 
 }
