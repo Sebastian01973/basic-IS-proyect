@@ -59,6 +59,9 @@ public class Controller implements ActionListener, MouseListener, WindowListener
         jMainWindows.addElementToTable(products);
     }
 
+    /**
+     *
+     */
     private void cancelProduct() {
         jMainWindows.setVisibleDialogAdd(false);
         jMainWindows.resetDatesAddProduct();
