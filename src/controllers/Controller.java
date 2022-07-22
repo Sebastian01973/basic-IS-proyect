@@ -54,6 +54,7 @@ public class Controller implements ActionListener, MouseListener, WindowListener
     }
 
     private void loadProducts(){
+        //Test
         ArrayList<Object[]> products = store.getMatrixProducts();
         jMainWindows.addElementToTable(products);
     }
