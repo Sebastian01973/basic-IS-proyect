@@ -88,6 +88,7 @@ public class Controller implements ActionListener, MouseListener, WindowListener
         }
 
         //Test
+        //Prueba
         store.printProducts();
     }
 
