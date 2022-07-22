@@ -32,8 +32,25 @@ public class Controller implements ActionListener, MouseListener, WindowListener
             case EXIT -> exitAdmin();
             case SAVE_PRODUCT -> saveProduct();
             case CANCEL_PRODUCT ->  cancelProduct();
+            case CANCEL_DELETE -> {
+                jMainWindows.setVisibleDeleteDialog(false);
+                jMainWindows.emptyCodeDelete();
+            }
+            case DIALOG_DELETE -> this.deleteProduct();
             default -> Logger.getGlobal().severe("Error");
         }
+    }
+
+    private void deleteProduct() {
+        int code = Integer.parseInt(jMainWindows.getCodeProductDelete());
+        if (store.isExistProduct(code)){
+            Product product = store.searchProduct(code);
+            store.deleteProduct(product);
+            loadProducts();
+        }else{
+            JOptionPane.showMessageDialog(jMainWindows,Constant.TXT_NOT_DELETE);
+        }
+        jMainWindows.setVisibleDeleteDialog(false);
     }
 
     private void loadProducts(){

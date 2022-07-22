@@ -40,6 +40,14 @@ public class JMainWindows extends JFrame {
         this.getContentPane().add(jMainPanel, BorderLayout.CENTER);
     }
 
+    public String getCodeProductDelete(){
+        return jDialogDelete.getCodeProductDelete();
+    }
+
+    public void emptyCodeDelete(){
+        jDialogDelete.emptyCodeDelete();
+    }
+
     public void addRowsToTable(ArrayList<Object[]> matrix, String[] newHeaders){
         jMainPanel.addRowsToTable(matrix, newHeaders);
     }

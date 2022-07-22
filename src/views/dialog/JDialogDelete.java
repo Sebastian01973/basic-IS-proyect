@@ -43,10 +43,10 @@ public class JDialogDelete extends JDialog {
         banner.setBackground(Constant.COLOR_GREEN_DARK_2);
         jContainer.add(banner);
 
-
-        jCodeProduct = new JModelTextField(Constant.NAME_PRODUCT,Constant.FONT_HELVETICA_15,Constant.COLOR_GREEN_DARK_2,Constant.COLOR_GRAY_LIGHT_1);
+        //Perimitir que solo ingrese 10 digitos del codigo.. o se putea
+        jCodeProduct = new JModelTextField(Constant.CODE_PRODUCT,Constant.FONT_HELVETICA_15,Constant.COLOR_GREEN_DARK_2,Constant.COLOR_GRAY_LIGHT_1);
         jCodeProduct.validateNum(jCodeProduct);
-        jCodeProduct.setBorder(BorderFactory.createTitledBorder(Constant.TXT_PRODUCT));
+        jCodeProduct.setBorder(BorderFactory.createTitledBorder(Constant.TXT_CODE));
         jContainer.add(jCodeProduct);
 
 
@@ -62,5 +62,16 @@ public class JDialogDelete extends JDialog {
         jContainer.add( jBCancel);
 
         this.add(jContainer);
+    }
+
+    public String getCodeProductDelete(){
+        if (!jCodeProduct.getText().isEmpty()){
+            return jCodeProduct.getText();
+        }
+        return "";
+    }
+
+    public void emptyCodeDelete(){
+        jCodeProduct.setText("");
     }
 }

@@ -50,7 +50,9 @@ public class Constant {
 
     public static final String ADD_PRODUCT = "Agregar Producto";
     public static final String NAME_PRODUCT = "Nombre del producto";
+    public static final String CODE_PRODUCT = "Codigo del producto";
     public static final String TXT_PRODUCT = "Ingresar nombre del producto:";
+    public static final String TXT_CODE = "Ingresar codigo del producto:";
     public static final String TXT_PRICE = "Ingresar precio del producto:";
     public static final String TXT_UNITS = "Ingresar unidades del producto";
 
@@ -69,4 +71,5 @@ public class Constant {
     public static final String TXT_MODIFY = "Modificar";
     public static final String TXT_DELETE = "Eliminar";
     public static final String D_TXT_DELETE = "Eliminar Producto";
+    public static final Object TXT_NOT_DELETE = "No existe el producto intente de nuevo";
 }
