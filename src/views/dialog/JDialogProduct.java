@@ -63,7 +63,10 @@ public class JDialogProduct extends JDialog {
         }
     }
 
-
+    /**
+     *
+     * @return
+     */
     public Object[] modifyProduct(){
         if (jCBType.getSelectedIndex() != 0){
             return new Object[]{
